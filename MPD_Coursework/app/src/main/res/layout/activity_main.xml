@@ -1,0 +1,78 @@
+<!--  Stephen Wrath S1624817  -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:map="http://schemas.android.com/apk/res-auto">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <TextView
+            android:id="@+id/matric"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Stephen Wrath S1624817" />
+        <fragment
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="325dp"
+            map:cameraTargetLat="55.8642"
+            map:cameraTargetLng="-4.2518"
+            map:cameraTilt="30"
+            map:cameraZoom="6"
+            map:uiScrollGestures="true"
+            map:uiZoomGestures="true"
+            tools:context=".MainActivity"/>
+
+        <TextView
+            android:id="@+id/salutation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Please Select an option"
+            />
+        <RadioGroup
+            android:id="@+id/roadworkRadioS"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+        <RadioButton
+            android:id="@+id/currentButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Current Incidents"
+            />
+        <RadioButton
+            android:id="@+id/plannedButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Planned Roadworks"
+            />
+        <RadioButton
+            android:id="@+id/roadworkButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Roadworks"
+            />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/acknowledgement"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Traffic Scotland Road Data"
+            />
+
+        <TextView
+            android:id="@+id/rawDataDisplay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text=""
+            />
+    </LinearLayout>
+</ScrollView>
